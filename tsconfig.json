@@ -1,0 +1,55 @@
+{
+  // ts编译过程中的配置
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noImplicitAny": false,
+    "allowJs": true, // 是否允许编译 js 代码，比如 es6 代码
+    "noUnusedLocals": false, // 没有使用到的变量会提示
+    "noUnusedParameters": true, // 函数里面没有用到的参数会提示
+    "strictNullChecks": false,
+    "types": [
+      "vite/client",
+      "element-plus/global",
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "_v/*": [
+        "src/views/*"
+      ],
+      "_c/*": [
+        "src/components/*"
+      ],
+      "_a/*": [
+        "src/assets/*"
+      ],
+      "_r/*": [
+        "src/request/*"
+      ],
+      "_public/*": [
+        "public/*"
+      ]
+    },
+  },
+  // 需要编译的ts文件，include也可以写成files
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./auto-imports.d.ts"
+  ],
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+}

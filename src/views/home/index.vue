@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup>
 import LeftMenu from '@/components/left-menu/index.vue'
 defineExpose({})
 
@@ -7,12 +7,30 @@ onUnmounted(() => { })
 </script>
 
 <template>
-  <div>
-    <el-row :gutter="0">
-      <el-col :span="3">
-        <left-menu />
-      </el-col>
-      <el-col :span="19"></el-col>
-    </el-row>
+  <div class="page">
+    <div class="left-menu">
+      <left-menu />
+    </div>
+    <div class="divider"></div>
+    <div class="main"></div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.page {
+  display: flex;
+
+  .left-menu {
+    width: 240px
+  }
+
+  .main {
+    flex: 1;
+  }
+}
+
+.divider {
+  border-left: 1px solid #292929;
+  height: 100vh;
+}
+</style>

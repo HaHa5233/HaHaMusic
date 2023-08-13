@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
+    ElDivider: typeof import('element-plus/es')['ElDivider']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElRow: typeof import('element-plus/es')['ElRow']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
@@ -21,6 +22,7 @@ declare module 'vue' {
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NDivider: typeof import('naive-ui')['NDivider']
     NEl: typeof import('naive-ui')['NEl']
     NMenu: typeof import('naive-ui')['NMenu']
     NSpace: typeof import('naive-ui')['NSpace']

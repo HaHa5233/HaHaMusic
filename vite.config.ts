@@ -1,16 +1,18 @@
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite';
-// import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-
+import { createSvg } from './src/svg/index'
 
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
+    createSvg('./src/svg/icons/'),
     AutoImport({
       dts: true, // 会在根目录生成auto-imports.d.ts，里面可以看到自动导入的api
       include: [/\.[tj]sx?$/, /\.vue$/], // 匹配的文件，也就是哪些后缀的文件需要自动引入
@@ -19,12 +21,18 @@ export default defineConfig({
         'vue-router',
       ],
       // 解析器配置
-      // resolvers: [ElementPlusResolver()], // 第三方ui
+      resolvers: [
+        ElementPlusResolver(),
+        NaiveUiResolver()
+      ], // 第三方ui
       // 根据项目情况配置eslintrc，默认是不开启的
       eslintrc: {
         enabled: true // @default false
       }
-    })
+    }),
+    Components({
+      resolvers: [ElementPlusResolver(), NaiveUiResolver()],
+    }),
   ],
   // server: {
   //   port: 3001,

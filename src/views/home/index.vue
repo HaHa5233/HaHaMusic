@@ -9,10 +9,10 @@ onUnmounted(() => { })
 <template>
   <div>
     <el-row :gutter="0">
-      <el-col :span="6">
+      <el-col :span="3">
         <left-menu />
       </el-col>
-      <el-col :span="18"></el-col>
+      <el-col :span="19"></el-col>
     </el-row>
   </div>
 </template>

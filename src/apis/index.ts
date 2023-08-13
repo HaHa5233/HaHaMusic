@@ -4,6 +4,7 @@ import { ElMessage } from 'element-plus'
 
 const service: AxiosInstance = axios.create({
   baseURL: 'http://localhost:3000',
+  withCredentials: true, // 跨域请求时发送Cookie
   timeout: 50000
 })
 

@@ -1,6 +1,6 @@
 <script setup>
 import router from '@/router';
-
+import { touristLogin } from '@/apis/user/index'
 // import { useDark, useToggle } from '@vueuse/core'
 // import Theme from '@/components/theme/index.vue'
 
@@ -12,11 +12,13 @@ import router from '@/router';
 const menus = ref([
   {
     id: 1,
-    name: '首页'
+    name: '首页',
+    icon: 'iconfont icon-home2'
   },
   {
     id: 2,
-    name: '我的'
+    name: '我的',
+    icon: 'iconfont icon-home1'
   }
 ])
 const active = ref('首页')
@@ -31,18 +33,26 @@ const handeToPage = (item) => {
   }
   active.value = item.name
 }
+
+// 登录
+const login = () => {
+  touristLogin().then((res) => {
+    console.log('res', res)
+  })
+}
 </script>
 
 <template>
   <div class="main">
     <ul class="menu">
-      <li v-for="item in  menus " :key="item.id" @click="handeToPage(item)" :class="{ active: active === item.name }">
+      <li v-for="item in   menus   " :key="item.id" @click="handeToPage(item)" :class="{ active: active === item.name }">
+        <i :class="item.icon"></i>
         {{ item.name }}
       </li>
       <div class="divider"></div>
       <div class="login">
         <div>登录</div>
-        <div>游客登录</div>
+        <div @click="login">游客登录</div>
         <span>登录以创建和分享播放列表、观看个性化推荐内容，等等</span>
       </div>
     </ul>
@@ -69,6 +79,11 @@ const handeToPage = (item) => {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
+  }
+
+  i {
+    font-size: 20px;
+    margin-right: 10px;
   }
 }
 

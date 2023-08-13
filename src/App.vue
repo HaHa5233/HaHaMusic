@@ -3,6 +3,7 @@ import { NConfigProvider, NGlobalStyle, zhCN, dateZhCN } from 'naive-ui'
 import { useThemeStore } from '@/stores/theme'
 // themeStore 主题实例
 const themeStore = useThemeStore()
+import themeColor  from ''
 </script>
 
 <template>

@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { NConfigProvider, NGlobalStyle, zhCN, dateZhCN } from 'naive-ui'
 import { useThemeStore } from '@/stores/theme'
 // themeStore 主题实例
@@ -9,7 +9,7 @@ import themeColors from '@/untils/themeColor'
 <template>
   <div id="root">
     <!-- <n-config-provider :theme="themeStore.theme" :theme-overrides="themeColors" :locale="zhCN" :date-locale="dateZhCN"> -->
-      <n-config-provider :theme-overrides="themeColors">
+    <n-config-provider :theme-overrides="themeColors">
       <router-view v-slot="{ Component }">
         <transition>
           <keep-alive>

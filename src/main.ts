@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import piniaPersist from 'pinia-plugin-persist'
 // 引入tailwindcss
 import './assets/css/taildwindcss.css'
 // 引入element-plus样式
@@ -14,7 +13,6 @@ import router from './router'
 
 const app = createApp(App)
 const pinia = createPinia()
-pinia.use(piniaPersist)
 app.use(pinia)
 app.use(router)
 

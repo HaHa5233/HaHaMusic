@@ -10,3 +10,8 @@ export function phoneLogin(data: type.PhoneLoginData) {
 export function touristLogin() {
   return api.post<type.TouristLoginRes>('/register/anonimous')
 }
+
+// 用户歌单
+export function userPlaylist(config: type.UserPlaylistParams) {
+  return api.get('/user/playlist', { config })
+}

@@ -14,3 +14,13 @@ export interface PhoneLoginRes {
 export interface TouristLoginRes {
   token: string
 }
+
+// 获取用户推荐歌单
+export interface UserPlaylistParams {
+  uid: number
+  limit?: number
+  offset?: number
+}
+// export interface UserPlaylistRes {
+//   token: string
+// }

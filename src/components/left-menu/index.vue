@@ -1,6 +1,7 @@
 <script setup>
-import router from '@/router';
+import { useRouter } from 'vue-router'
 import { touristLogin } from '@/apis/user/index'
+import { useUserStore } from '@/stores/user'
 // import { useDark, useToggle } from '@vueuse/core'
 // import Theme from '@/components/theme/index.vue'
 
@@ -9,6 +10,8 @@ import { touristLogin } from '@/apis/user/index'
 // const handleChangeDark = () => {
 //   toggleDark()
 // }
+const router = useRouter()
+const userStore = useUserStore()
 const menus = ref([
   {
     id: 1,
@@ -37,7 +40,7 @@ const handeToPage = (item) => {
 // 登录
 const login = () => {
   touristLogin().then((res) => {
-    console.log('res', res)
+    userStore.login(res)
   })
 }
 </script>
@@ -45,7 +48,7 @@ const login = () => {
 <template>
   <div class="main">
     <ul class="menu">
-      <li v-for="item in   menus   " :key="item.id" @click="handeToPage(item)" :class="{ active: active === item.name }">
+      <li v-for="item in menus" :key="item.id" @click="handeToPage(item)" :class="{ active: active === item.name }">
         <i :class="item.icon"></i>
         {{ item.name }}
       </li>

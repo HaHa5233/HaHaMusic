@@ -1,0 +1,7 @@
+/* 引入新字体 */
+@font-face {
+  font-family: 'HaHa-Sphericity';
+  src: url('./圆体.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

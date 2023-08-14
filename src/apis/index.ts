@@ -4,6 +4,7 @@ import { ElMessage } from 'element-plus'
 
 const service: AxiosInstance = axios.create({
   baseURL: 'http://localhost:3000',
+  withCredentials: true, // 跨域请求时发送Cookie
   timeout: 50000
 })
 
@@ -21,7 +22,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response: AxiosResponse) => {
     // return Promise.resolve(response)
-    const { data } = response.data
+    const { data } = response
     if (data.code === 200) {
       return Promise.resolve(data)
     } else {

@@ -1,11 +1,11 @@
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite';
-// import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-
 
 export default defineConfig({
   plugins: [
@@ -19,12 +19,18 @@ export default defineConfig({
         'vue-router',
       ],
       // 解析器配置
-      // resolvers: [ElementPlusResolver()], // 第三方ui
+      resolvers: [
+        ElementPlusResolver(),
+        NaiveUiResolver()
+      ], // 第三方ui
       // 根据项目情况配置eslintrc，默认是不开启的
       eslintrc: {
         enabled: true // @default false
       }
-    })
+    }),
+    Components({
+      resolvers: [ElementPlusResolver(), NaiveUiResolver()],
+    }),
   ],
   // server: {
   //   port: 3001,

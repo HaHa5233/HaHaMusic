@@ -4,9 +4,11 @@ module.exports = {
     './index.html',
     './src/**/*.{js,ts,tsx,jsx,vue}'
   ],
-  theme: {
-    extend: {},
+  corePlugins: {
+    preflight: false,
   },
-  plugins: [],
-}
-
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  }

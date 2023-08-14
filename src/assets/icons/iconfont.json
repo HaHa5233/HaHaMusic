@@ -1,0 +1,30 @@
+{
+  "id": "4208947",
+  "name": "cloudMusic",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33516",
+      "name": "home",
+      "font_class": "home2",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "1045414",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "7573246",
+      "name": "home",
+      "font_class": "home1",
+      "unicode": "e6f5",
+      "unicode_decimal": 59125
+    }
+  ]
+}

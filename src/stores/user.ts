@@ -21,6 +21,10 @@ export const useUserStore = defineStore('userStore', () => {
     userInfo.token = ''
   }
 
-  return { userInfo, login, loginOut }
+  return {
+    userInfo,
+    login,
+    loginOut
+  }
 })
 

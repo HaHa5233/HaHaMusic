@@ -2,7 +2,9 @@
 import LeftMenu from '@/components/left-menu/index.vue'
 defineExpose({})
 
+
 onMounted(() => { })
+
 onUnmounted(() => { })
 </script>
 
@@ -11,7 +13,7 @@ onUnmounted(() => { })
     <div class="left-menu">
       <left-menu />
     </div>
-    <div class="divider"></div>
+    <!-- <div class="divider"></div> -->
     <div class="main"></div>
   </div>
 </template>

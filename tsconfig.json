@@ -5,7 +5,6 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
     "allowJs": true, // 是否允许编译 js 代码，比如 es6 代码
     "noUnusedLocals": false, // 没有使用到的变量会提示
     "noUnusedParameters": true, // 函数里面没有用到的参数会提示

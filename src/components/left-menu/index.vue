@@ -131,7 +131,7 @@ onMounted(() => {
     color: #fff;
     text-align: center;
     padding-inline-start: 0;
-    height: 100vh;
+    height: 100%;
 
 
     span {
@@ -154,7 +154,7 @@ onMounted(() => {
 
 .mainactive {
   border-right: 1px solid #292929;
-  height: 100vh;
+  height: calc(100vh - 32px);
 }
 
 li {

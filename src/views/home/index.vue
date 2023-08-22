@@ -1,8 +1,11 @@
 <script setup>
 import LeftMenu from '@/components/left-menu/index.vue'
+import MainInteface from '@/views/main-interface/index.vue'
 defineExpose({})
 
+
 onMounted(() => { })
+
 onUnmounted(() => { })
 </script>
 
@@ -11,13 +14,16 @@ onUnmounted(() => { })
     <div class="left-menu">
       <left-menu />
     </div>
-    <div class="divider"></div>
-    <div class="main"></div>
+    <div class="main">
+      <MainInteface />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .page {
+  height: 100%;
+  width: 100%;
   display: flex;
 
   .left-menu {
@@ -27,10 +33,5 @@ onUnmounted(() => { })
   .main {
     flex: 1;
   }
-}
-
-.divider {
-  border-left: 1px solid #292929;
-  height: 100vh;
 }
 </style>

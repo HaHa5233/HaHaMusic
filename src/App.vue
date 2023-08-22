@@ -1,15 +1,8 @@
-<script setup>
-import { NConfigProvider, NGlobalStyle, zhCN, dateZhCN } from 'naive-ui'
-import { useThemeStore } from '@/stores/theme'
-// themeStore 主题实例
-const themeStore = useThemeStore()
-import themeColors from '@/untils/themeColor'
+<script lang="ts" setup>
 </script>
 
 <template>
   <div id="root">
-    <!-- <n-config-provider :theme="themeStore.theme" :theme-overrides="themeColors" :locale="zhCN" :date-locale="dateZhCN"> -->
-      <n-config-provider :theme-overrides="themeColors">
       <router-view v-slot="{ Component }">
         <transition>
           <keep-alive>
@@ -17,8 +10,6 @@ import themeColors from '@/untils/themeColor'
           </keep-alive>
         </transition>
       </router-view>
-      <n-global-style />
-    </n-config-provider>
   </div>
 </template>
 
@@ -40,5 +31,6 @@ body {
   /* font-family: 'HaHa-Sphericity'; */
   font-size: 16px;
   background-color: #030303;
+  opacity: 0.9;
 }
 </style>

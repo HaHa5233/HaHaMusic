@@ -4,7 +4,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "allowJs": true, // 是否允许编译 js 代码，比如 es6 代码
     "noUnusedLocals": false, // 没有使用到的变量会提示
     "noUnusedParameters": true, // 函数里面没有用到的参数会提示
@@ -12,7 +12,8 @@
     "types": [
       "vite/client",
       "element-plus/global",
-      "node"
+      "node",
+      "pinia-plugin-persist"
     ],
     "baseUrl": "./",
     "paths": {

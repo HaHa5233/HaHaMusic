@@ -1,0 +1,24 @@
+html.dark {
+  color-scheme: light dark;
+}
+
+/* 定义根作用域下的变量 */
+/* :root {
+  --theme-color: #646b7c;
+  --theme-background: #f7f9fc;
+} */
+
+
+/* 更改dark类名下变量的取值 */
+:root {
+  --font-color: #a3a3a6;
+  --hover-color: #fff;
+  --left-background: rgb(26, 26, 33);
+  --right-background: rgb(19, 19, 26);
+}
+
+/* 更改pink类名下变量的取值 */
+.pink {
+  --theme-color: #fff;
+  --theme-background: pink;
+}

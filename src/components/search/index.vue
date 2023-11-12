@@ -7,30 +7,67 @@ onUnmounted(() => { })
 
 <template>
   <div class="searchBar">
-    <span>
-      <span class="icon-span">icon</span>
-      <input name="input" type="search" autocomplete="off" size="60" placeholder="搜索歌曲、专辑、音乐人、博客" class="search">
-    </span>
+    <div class="div-icon">
+      <span>&lt;</span>
+    </div>
+    <div class="div-search">
+      <input class="search" name="input" type="search" autocomplete="off" size="60" placeholder="与秋书（合唱版）- 光头华夏">
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .searchBar {
-  color:tomato;
+  display: flex;
 }
-.search {
-  height: 40px;
-  background-color: rgb(44,52,55,0.8);
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  color: #b3b3b3;
-  font-weight: blod;
+
+.div-icon {
+  height: 36px;
+  width: 26px;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #2b2b31;
+  text-align: center;
+  line-height: 36px;
+
+  span {
+    margin: 0 auto;
+    color: #a1a1a3;
+    font-size: 18px;
+  }
 }
-.icon-span {
+
+.div-search {
+  position: relative;
+
+  .search {
+    position: absolute;
+    height: 38px;
+    width: 290px;
+    background: linear-gradient(to right, #1d283e, #3a2537);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #71707a;
+    padding-left: 5px;
+    z-index: 2;
+  }
+
+  .search:focus {
+    outline: none;
+    background: #13131a
+  }
+}
+
+.div-search::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 292px;
   height: 40px;
-  width: 40px;
-  display: inline-block;
-  background-color: rgb(44,52,55,0.8);
+  top: -1px;
+  left: -1px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #1d283e, #3a2537);
 }
 </style>

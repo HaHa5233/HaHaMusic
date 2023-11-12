@@ -14,6 +14,6 @@ onUnmounted(() => { })
 
 <style lang="scss" scoped>
 .mainInterface {
-  padding: 10px;
+  padding: 20px 10px;
 }
 </style>

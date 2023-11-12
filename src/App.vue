@@ -3,13 +3,13 @@
 
 <template>
   <div id="root">
-      <router-view v-slot="{ Component }">
-        <transition>
-          <keep-alive>
-            <component :is="Component" />
-          </keep-alive>
-        </transition>
-      </router-view>
+    <router-view v-slot="{ Component }">
+      <transition>
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -28,9 +28,7 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  /* font-family: 'HaHa-Sphericity'; */
   font-size: 16px;
-  background-color: #030303;
-  opacity: 0.9;
+  transition: all 0.3s;
 }
 </style>

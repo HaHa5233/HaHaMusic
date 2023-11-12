@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import LeftMenu from '@/components/left-menu/index.vue'
 import MainInteface from '@/views/main-interface/index.vue'
 defineExpose({})
@@ -27,11 +27,15 @@ onUnmounted(() => { })
   display: flex;
 
   .left-menu {
-    width: 240px
+    width: 240px;
+    color: #a3a3a6;
+    background-color: rgb(26, 26, 33);
   }
 
   .main {
     flex: 1;
+    // color: var(--theme-color);
+    background-color: rgb(19, 19, 26);
   }
 }
 </style>
